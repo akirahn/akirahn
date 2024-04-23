@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The document.getElementsByName Method</h2>
+
+<p>First Name: <input name="fname" type="text" value="Michael"></p>
+<p>First Name: <input name="fname" type="text" value="Doug"></p>
+
+<p>The tag name of the first element with the name "fname" is:</p>
+
+<p id="demo"></p>
+
+<script>
+let elements = document.getElementsByName("fname");
+document.getElementById("demo").innerHTML = elements[0].value;
+alert(elements.length);
+</script>
+
+</body>
+</html>

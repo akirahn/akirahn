@@ -1,0 +1,55 @@
+:root {
+	--fundo: #393937;
+	--borda-cor: #3de2e0; /*#0FD4E7; /* DodgerBlue RoyalBlue */
+	--fundo-tabela-padrao: #393937 ;
+	--fundo-menu: #393937;
+	--branco: #FFFFFF;
+	--cor: #FFFFFF;
+	--cor-menu: #FFFFFF;
+	--preto: #000000;
+	--cor-titulo: #007315;
+	--cor-mensagem: #99ff99;
+	--positivo: #000000;/*#00802b;*/
+	--positivo-color: #000000;
+	--positivo-total-color: #04AA6D;
+	--negativo: #ff4d4d; /*#e60000;*/
+	--negativo-color: #ff4d4d; /*#e60000;*/
+	--cor-botao: #04AA6D;
+	--radio: #006600;
+}
+body {
+	background-color: var(--fundo);
+	color: var(--borda-cor);
+}
+button {
+  background-color: transparent;
+	border: 1px solid var(--borda-cor); 
+  color: var(--borda-cor); 
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+	margin: 3px;
+	width: 120px;
+	text-align: left;	
+}
+
+button.add { width: 33px; }
+
+button.btn { width: 20px; }
+
+button.sair { background-color: red; border: 1px solid red; color: white; }
+
+button.barra2 { width: 77px; }
+
+button:active {
+  background-color: var(--borda-cor); 
+	color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.titulo {
+	color: var(--borda-cor);
+	font-size: 25px;
+}
+

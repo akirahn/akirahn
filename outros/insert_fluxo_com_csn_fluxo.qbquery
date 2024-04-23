@@ -1,0 +1,17 @@
+﻿insert into fluxo
+(dt_fluxo, fluxo_tipo_id, fluxo_movimento_id, vl_fluxo, membro_id, dt_competencia, obs)
+SELECT f.dt_fluxo, t.id, mv.id, f.vl_fluxo, m.id,
+case
+  when f.dt_competencia is null or f.dt_competencia = '0000-00-00' then
+    f.dt_fluxo
+  else
+    f.dt_competencia
+end,
+f.obs
+FROM csn_fluxo f
+inner join fluxo_tipo t
+on f.tp_subfluxo = t.ds_fluxo_tipo collate latin1_swedish_ci
+inner join fluxo_movimento mv
+on f.tp_movimento = mv.simbolo collate latin1_swedish_ci
+left join membro m
+on f.membro = m.nm_apelido collate latin1_swedish_ci

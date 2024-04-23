@@ -1,0 +1,10 @@
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='/apps/arquivos/padrao.css' type='text/css'/>
+	<link rel='stylesheet' href='/apps/arquivos/forms.css' type='text/css'/>
+	<link rel='stylesheet' href='/apps/arquivos/menu.css' type='text/css'/>
+	<link rel='stylesheet' href='<?=$app_padrao?>.css' type='text/css'/>
+	<script src="/apps/arquivos/jquery-3.6.1.min.js"></script>
+	<script src="/apps/arquivos/padrao.js"></script>
+	<script src="<?=$app_padrao?>.js"></script>

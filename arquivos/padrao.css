@@ -1,0 +1,401 @@
+/* Padrão menu e aplicação */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+li { list-style-type: none;	list-style-position: outside; }
+/****************** TABELA.PADRAO *********************/
+/*table.consulta th, table.consulta td { font-size: 12px; }*/
+table.padrao th {
+	font-weight: bold;
+	background-color: var(--fundo-menu);
+	color: var(--cor-menu);
+	/*
+	background-color: var(--fundo-tabela-padrao);
+	text-align: center;
+	border:  1px solid var(--fundo-menu);
+	*/
+	/*border-radius: 20px;*/
+	font-size: 14px;
+	font-weight: bold;
+}
+table.padrao th.tipo_fluxo, table.padrao th.tipo_fluxo_negativo {
+	font-weight: bold;
+	/*
+	text-align: center;
+	border:  1px solid var(--fundo-menu);
+	background-color: var(--fundo-tabela-padrao);
+	*/
+	/*border-radius: 20px;*/
+	color: var(--cor-menu);
+	background-color: var(--fundo-menu);
+	font-size: 14px;
+	font-weight: bold;
+}
+table.padrao th.tipo_fluxo_negativo {
+	color: var(--negativo);
+	/*border:  2px dashed var(--fundo-menu);*/
+}
+table.padrao td {
+	color: var(--fundo-menu);
+	font-size: 12px;
+	padding: 5px;
+	margin:  0px;
+	height: 20px;
+/*
+	border: 1px solid var(--preto);
+	line-height: 20px;
+	border-radius: 10px;
+*/
+}
+
+table.padrao tr:nth-child(odd), div.tr_odd {
+	background-color: #E8E8E8;
+}
+
+table.padrao td label {
+	font-size: 12px;
+}
+table.padrao td.positivo, table.padrao th.positivo {
+	/*background-color: var(--branco);*/
+	color: var(--positivo-color);
+}
+table.padrao td.positivo_total, table.padrao th.positivo_total {
+	/*background-color: var(--branco);*/
+	color: var(--positivo-total-color);
+}
+table.padrao td.negativo, table.padrao th.negativo, div.negativo {
+	/*background-color: var(--negativo);*/
+	color: var(--negativo-color);
+	font-weight: bold;
+}
+table.padrao td.acao a {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	color: var(--fundo-menu);
+	font-weight: bold;
+}
+table.padrao td.acao, table.padrao th.acao {
+	/*cursor: pointer;*/
+	/*background-color: var(--cor-titulo);*/
+	/*color: var(--branco);*/
+	background: transparent;
+	text-align: center;
+	font-weight: bold;
+	border: none; /*1px solid var(--branco) ;*/
+	width: 5%;
+}
+table.padrao td a {
+	text-decoration: none;
+	padding: 2px;
+	border: 0;
+	font-weight: bold;
+	color: var(--cor-menu);
+}
+table.padrao td.botao {
+	text-align: center;
+	cursor: pointer;
+	background-color: var(--cor-titulo);
+	color:  var(--branco);
+	border: 1px solid var(--branco);
+}
+
+table.formaPagto td, table.formaPagto th {
+	border: 1px solid var(--branco);
+	color: var(--branco);
+	font-size: 12px;
+}
+
+table.formaPagto td.nada, table.formaPagto th.nada {
+	border: none;
+}
+
+/****************** GRID **********************/
+.linha{
+	display: flex;
+	flex-flow: row wrap;
+	background-color: var(--cor-menu);
+	border-radius: 5px;
+	padding: 2px;
+	margin: 3px;
+	border: 1px solid #000000;
+	font-size: 13px;
+	text-align: center;
+}
+
+.linha button {
+	float: right;
+}
+
+/* 2 COLUNAS */ 
+.coluna-50 { width: 50%; }
+/* 3 COLUNAS */ 
+.coluna-33 { width: 33%; }
+/* 4 COLUNAS */
+.coluna-25 { width: 25%; }
+/* 6 COLUNAS */
+.coluna-16 { width: 16%; }
+/* 7 COLUNAS */
+.coluna-14 { width: 14%; }
+/* 8 COLUNAS */
+.coluna-12 { width: 12%; }
+/* 9 COLUNAS */
+.coluna-11 { width: 11%; }
+
+/* Com  Coluna 12 (Botões) */ 
+/* 1 COLUNAS */ 
+.coluna-97 { width: 97%; }
+/* 2 COLUNAS */ 
+.coluna-88 { width: 84%; }
+/* 3 COLUNAS */ 
+.coluna-44 { width: 44%; }
+/* 4 COLUNAS */
+.coluna-29 { width: 29%; }
+.coluna-22 { width: 22%; }
+/* 5 COLUNAS */
+.coluna-17 { width: 17%; }
+
+/****************** MODAL *********************/
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(86, 84, 84, 0.4);
+}
+.modal-content {
+  background-color: var(--fundo-menu);
+	color: var(--cor-menu);
+  margin: 1% auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 99%;
+	max-width: 99%;
+	max-height: 98%;
+	overflow: auto;
+	z-index: 10000;
+}
+.modal-content label, .modal-content td {
+	color: var(--branco);
+}
+.close {
+	color: var(--branco);
+	background-color: var(--cor-titulo);
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: 2px;
+}
+
+.barraTop {
+	position: fixed;
+	left: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: var(--cor-menu);
+}
+
+.fechar {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	color: var(--branco);
+	background-color: var(--cor-titulo);
+  font-size: 15px;
+  font-weight: bold;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: 2px;
+}
+
+.gravar {
+	position: fixed;
+	bottom: 30px;
+	right: 20px;
+	color: var(--branco);
+	background-color: var(--cor-titulo);
+  font-size: 15px;
+  font-weight: bold;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: 2px;
+}
+
+.close:active, .botao:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.botao:hover,
+.botao:focus,
+.fechar:hover,
+.fechar:focus,
+.gravar:hover,
+.gravar:focus,
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#textoMensagem, #textoAviso {
+	font-size: 16px;
+}
+
+span.tituloEdicao, .modalTitulo {
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 1px solid var(--branco);
+	width: 90%;
+}
+/****************** Layout Tela *********************/
+body { 
+	font-size: 9px;
+}
+body, select, button, input {
+	font-family: var(--fonte-padrao);
+}
+
+#quad, #listaConteudo {
+	position: fixed;
+	top:  6%;
+	width: 95%;
+	height: 90%;
+	border:  1px solid red;
+	overflow: auto;
+	text-align: center;
+}
+div.titulo {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	/*background-color: var(--fundo);*/
+	color: var(--cor);
+	display: inline;
+	/*font-size: 25px;*/
+}	
+div.titulo table td.ae {
+	/*
+	cursor: pointer;
+	border-radius: 15px;
+	border: 1px solid var(--cor-titulo);
+	background-color: var(--cor-titulo);
+	*/	
+	color: var(--cor-menu);
+	font-weight: bold;
+	text-align: center;
+}
+div.titulo table td#tituloAE { color: var(--cor-titulo); }
+div.titulo table td#tituloBotoes span.botao { color: var(--branco); font-size:  15px; padding:  4px;}
+div.titulo table td#tituloBotoes { color: var(--cor-titulo); }
+div.rounded {
+	border-radius: 10px;
+	/*font-size: 15px;*/
+	font-weight: bold;
+	width: 95%;
+	border: 1px solid var(--fundo-tabela-padrao);
+	/*background-color: */
+	color: var(--fundo-tabela-padrao);
+	/*opacity: 0.7;*/
+	padding: 3px;
+	margin-bottom: 7px;
+	margin-left:  2px;
+	margin-right: 2px;
+	text-align: center;
+	cursor: pointer;
+}
+.tam70 { width: 70%; }
+.rm {
+	text-align: right;
+	font-size: 13px;
+	padding: 0px;
+}
+.btMenu{
+	/*font-size: 25px;*/
+	background-color: var(--fundo);
+	border: 1px solid var(--cor);
+	color: var(--cor);
+}
+.modal-content {
+	background-color: var(--fundo);
+	color: var(--cor);
+}
+.msgErro {
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: red;
+	color: var(--branco);
+}
+.display {
+	background-color: #d9d9d9;
+	border: none;
+}
+.fundoBranco {
+	background-color: var(--branco);
+}
+.textoBranco {
+	color: var(--branco);
+}
+.obs {
+	background-color: var(--cor-mensagem);	
+}
+
+.hr td, .hr th { border: 1px solid var(--fundo-menu); text-align: center}
+.preto { color: var(--preto); }
+
+.botao_gravar {
+	color: var(--branco);
+	background-color: var(--cor-titulo);
+  font-size: 25px;
+  font-weight: bold;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: 2px;
+}
+
+
+.modal-content td.uno {
+	text-align: right;
+}
+
+table td.uno, .uno_descricao {
+	font-size: 23px;
+}
+
+.btn_delete
+{
+	position: absolute;
+	left: .1em;
+	bottom: .1em;
+	width: 19px;
+}
+
+.ano {
+	width: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+@media 
+	screen and (min-resolution: 3dppx),
+	screen and (max-height: 500px),
+	screen and (-webkit-min-device-pixel-ratio: 3)	{
+
+	button {
+		background-color: red;
+	}
+	
+}
+	

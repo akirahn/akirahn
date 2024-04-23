@@ -1,0 +1,2 @@
+﻿delete from csn_fluxo
+where dt_fluxo = '2022-01-17'

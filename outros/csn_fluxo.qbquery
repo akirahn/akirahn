@@ -1,0 +1,2 @@
+﻿select tp_fluxo, dt_fluxo, vl_fluxo, membro, tp_movimento, tp_subfluxo, dt_competencia, Obs FROM csn_fluxo
+where dt_fluxo = '2022-01-17'

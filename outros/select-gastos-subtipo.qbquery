@@ -1,0 +1,17 @@
+﻿select concat(t.ds_tipo, '/', tg.ds_tag) subtipo, g.id, dt_pagto, format(vl_gasto, 2, 'de_DE') vl_gasto, g.nr_parcelas, g.obs, if(g.fk_movimento = 1,1, -1) tipo
+from gst_gastos g
+inner join gst_tab_subtipo s on s.id = g.fk_subtipo
+inner join gst_tab_tipo t on t.id = s.fk_tipo
+inner join gst_tab_tag tg on tg.id = s.fk_tag
+where /*s.fk_tipo in (14, 15, 19)
+and */date_format(g.dt_gasto, '%m/%Y') = '01/2024'
+union
+select concat(t.ds_tipo, '/', tg.ds_tag) subtipo, p.fk_gastos, p.dt_pagto, format(vl_parcela, 2, 'de_DE'), p.nr_parcela, '', -1
+from gst_parcelas p
+inner join gst_gastos g on g.id = p.fk_gastos
+inner join gst_tab_subtipo s on s.id = g.fk_subtipo
+inner join gst_tab_tipo t on t.id = s.fk_tipo
+inner join gst_tab_tag tg on tg.id = s.fk_tag
+where date_format(p.dt_pagto, '%m/%Y') = '01/2024'
+/*and s.fk_tipo in (14, 15, 19)*/
+order by 1

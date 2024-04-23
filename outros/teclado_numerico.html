@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Teste de Teclado</title>
+		<script language="JavaScript">
+			var um = 0;
+			var dois = 0;
+			var tres = 0;
+			var quatro = 0;
+			var cinco = 0;
+			var seis = 0;
+			var sete = 0;
+			
+			var qtdCliques = 0;
+		
+			function clicou(valor) {	
+				
+				switch (qtdCliques) {
+					case 0:
+						document.getElementById("campoSpan").textContent = '0,0' + valor;
+						um = valor;
+						umP = '0,0' + valor;
+						qtdCliques++;
+						break;
+					
+					case 1:
+						document.getElementById("campoSpan").textContent = '0,' + um + valor;
+						dois = valor;
+						doisP = '0,' + um + valor;
+						qtdCliques++;
+						break;
+					
+					case 2:
+						document.getElementById("campoSpan").textContent = um + ',' + dois + valor;
+						tres = valor;
+						tresP = um + ',' + dois + valor;
+						qtdCliques++;
+						break;
+					case 3:
+						document.getElementById("campoSpan").textContent = um + dois + ',' + tres + valor;
+						quatro = valor;
+						quatroP = um + dois + ',' + tres + valor;
+						qtdCliques++;
+						break;
+					case 4:
+						document.getElementById("campoSpan").textContent = um + dois + tres + ',' + quatro + valor;
+						cinco = valor;
+						cincoP = um + dois + tres + ',' + quatro + valor;
+						qtdCliques++;
+						break;
+					case 5:
+						document.getElementById("campoSpan").textContent = um + '.' + dois + tres + quatro + ',' + cinco + valor;
+						seis = valor;
+						seisP = um + '.' + dois + tres + quatro + ',' + cinco + valor;
+						qtdCliques++;
+						break;
+					case 6:
+						document.getElementById("campoSpan").textContent = um + dois + '.' + tres + quatro + cinco + ',' + seis + valor;
+						sete = valor;
+						seteP = um + dois + '.' + tres + quatro + cinco + ',' + seis + valor;
+						qtdCliques++;
+						break;
+					
+					default:
+						
+				}
+				
+			}
+			
+			function apagar() {
+				
+				document.getElementById("campoSpan").textContent = '0,00';
+				
+				qtdCliques = 0;
+				
+			}
+		</script>
+	</head>	
+	<body>
+
+		<h2><span id="">R$ </span>
+		<span id="campoSpan">0,00</span></h2>
+		
+		<br/>
+		
+		<input type="button" id="0" value="0" onclick="clicou(this.value)" />
+		<input type="button" id="1" value="1" onclick="clicou(this.value)" />
+		<input type="button" id="2" value="2" onclick="clicou(this.value)" />
+		<input type="button" id="3" value="3" onclick="clicou(this.value)" />
+		<input type="button" id="4" value="4" onclick="clicou(this.value)" />
+		<input type="button" id="5" value="5" onclick="clicou(this.value)" />
+		<input type="button" id="6" value="6" onclick="clicou(this.value)" />
+		<input type="button" id="7" value="7" onclick="clicou(this.value)" />
+		<input type="button" id="8" value="8" onclick="clicou(this.value)" />
+		<input type="button" id="9" value="9" onclick="clicou(this.value)" />
+		<input type="button" id="apagar" value="Apagar" onclick="apagar()" />
+
+	</body>
+</html>

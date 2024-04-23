@@ -1,0 +1,33 @@
+:root {
+/*	
+	--fundo: #1f253d; 
+	--fundo-tabela-padrao: #393937 ;
+	--fundo-menu: #393937;
+	--branco: #FFFFFF;
+	--cor: #FFFFFF;
+	--cor-menu: #FFFFFF;
+	--preto: #000000;
+	--cor-titulo: #FFFFFF; 
+	--cor-mensagem: #99ff99;
+*/	
+	--fundo: #122023; 
+	--fundo-tabela-padrao: #393937 ;
+	--fundo-menu: #393937;
+	--branco: #FFFFFF;
+	--cor: #FFFFFF;
+	--cor-menu: #FFFFFF;
+	--preto: #000000;
+	--cor-titulo: #007315;
+	--cor-mensagem: #99ff99;
+	--positivo: #000000;/*#00802b;*/
+	--positivo-color: #FFFFFF;
+	--negativo: #FFFFFF; /*#e60000;*/
+	--negativo-color: #ff4d4d; /*#e60000;*/
+	--cor-botao: #04AA6D;
+	--radio: #006600;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}

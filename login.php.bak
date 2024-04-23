@@ -1,0 +1,22 @@
+<center>
+<form name=frm_login id=frm_login method=post action="<?=$self?>">
+	<input type="hidden" name="PHPSESSID" value="<?=$valor_sessao?>">
+	Informe a senha de acesso<br>
+	<?php
+	// <input type=password name=acesso_ae style="font-size: 40px; " id=acesso_ae size=7 inputmode="numeric" autocomplete="off" readonly>
+	// <br><br>
+		monta_teclado_numerico(array("acesso_ae", "P"));
+	?>
+</form>
+</center>
+<script>
+// tela externa 470 x 286
+// Tela principal 376 x 777
+var windowWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+
+var screenWidth = screen.width;
+var screenHeight = screen.height;
+document.writeln("Janela: " + windowWidth + "x" + windowHeight + "<br>");
+document.writeln("Tela: " + screenWidth + "x" + screenHeight);
+</script>

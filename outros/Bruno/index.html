@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trabalho de Desenvolvimento Front-end</title>
+<style>
+
+#Exemplos {
+	position: absolute;
+	top: 510px;
+	left: 0px;
+}
+
+nav a {
+	font-size: 20px;
+	padding: 3px;
+	/*border: 1px solid black;*/
+	color: black;
+	text-decoration: underline overline;
+}
+
+a:visited.exemplo, a.exemplo {
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 2px;
+	color: black;
+} 
+.slide {
+	position: absolute;
+	top: 110px;
+	left: 0px;
+	width: 100%;
+	height: 420px;
+	display: none;
+	text-align: center;
+}
+
+</style>
+<script>
+	var indice = 1;
+	
+	function esconde_slide() {
+		document.getElementById("slide1").style.display = "none";
+		document.getElementById("slide2").style.display = "none";
+		document.getElementById("slide3").style.display = "none";
+	}
+	
+	function slideshow() {
+		esconde_slide();
+		document.getElementById("slide"+indice).style.display = "block";
+		if (indice < 3) {
+			indice++;
+		} else {
+			indice = 1;
+		}		
+	}
+	setInterval(slideshow, 1500);
+</script>
+</head>
+<body>
+
+<h1 align=center>Trabalho de Desenvolvimento Front-end</h1>
+
+<nav style="vertical-align: top;" align=center>
+	<center>
+	<a href="react.html"> React </a>
+	<a href="angular.html"> Angular </a>
+	<a href="vue.html"> Vue </a>
+	</center>
+</nav>
+
+<div class=slide id=slide1>
+	<a href="react.html"><img src="react.jpg"></a>
+</div>
+<div class=slide id=slide2>
+	<a href="angular.html"><img src="angular.jpg"></a>
+</div>
+<div class=slide id=slide3>
+	<a href="vue.html"><img src="vue.jpg"></a>
+</div>
+
+
+<div id=Exemplos>
+<h2>Exemplos</h2>
+
+<a href="https://scottchen98.github.io/pizza-express/" class=exemplo target=_blank>React (Pizza Express)</a>
+<a href="https://www.upwork.com/" class=exemplo  target=_blank>Angular (Upwork.com)</a>
+<a href="https://www.travelstop.com/" class=exemplo  target=_blank>Vue (travelstop.com)</a>
+</div>
+
+</body>
+<script>
+	document.getElementById("slide1").style.display = "block";
+</script>
+</html>

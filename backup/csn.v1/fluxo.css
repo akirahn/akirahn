@@ -1,0 +1,112 @@
+:root {
+/*	
+	--fundo: #1f253d; 
+	--fundo-tabela-padrao: #393937 ;
+	--fundo-menu: #393937;
+	--branco: #FFFFFF;
+	--cor: #FFFFFF;
+	--cor-menu: #FFFFFF;
+	--preto: #000000;
+	--cor-titulo: #FFFFFF; 
+	--cor-mensagem: #99ff99;
+*/	
+	--fundo: #122023; 
+	--fundo-tabela-padrao: #393937 ;
+	--fundo-menu: #393937;
+	--branco: #FFFFFF;
+	--cor: #FFFFFF;
+	--cor-menu: #FFFFFF;
+	--preto: #000000;
+	--cor-titulo: #007315;
+	--cor-mensagem: #99ff99;
+	--positivo: #00802b;
+	--negativo: #e60000;
+}
+.csn {
+	margin:  2px;
+	color:  var(--cor-titulo);
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+}
+.rel3p {	font-size:  15px; }
+#telaConteudo textarea {
+	width:  95%;
+	height:  90%;
+}
+#telaConteudo, #telaConsulta, #telaMensalidade, #telaContas, #telaFluxo, 
+#telaEdicaoMensalidade, #telaEdicaoPrestacao, #telaEdicaoTerracap {
+	position: absolute;
+	top: 10%;
+	width:  92%;
+	height: 85%;
+	overflow: auto;
+	margin:  0 auto;
+	border:  1px solid var(--cor-titulo);
+	border-radius: 15px;
+	padding: 3px;
+}
+#Mensagem {
+	width: 100%;
+	overflow: auto;
+	font-size: 13px;	
+	border: 1px solid var(--cor-titulo);
+}
+#conteudo {
+	position: absolute;
+	top: 8%;
+	height: 85%;
+	width: 94%;
+	overflow: scroll;
+	/*border: 1px solid var(--cor-titulo);*/
+	padding: 3px;
+	border-radius: 10px;
+	/*background-color: #394264;*/
+}
+#menuAcao { font-size: 25px; background-color: var(--cor-titulo); color: var(--branco); border-color: var(--branco); }
+.mensagem {
+	background-color: var(--fundo--menu);
+	border:  0px;
+}
+.bt_opcoes, #opcao_menu {
+	background-color: var(--cor-titulo);
+	font-size: 12px;
+	color: var(--branco);
+	/*height: 10%;*/
+	text-align: center;
+}
+.bt_opcoes {
+	width: 90%;
+}
+.tela {
+	display: none;
+}
+optgroup {
+	text-align: left;
+}
+#opcao_menu {
+	font-size: 13px;
+}
+
+/*******************/
+/* Botão Pagamento */
+/*******************/
+
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 80%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}

@@ -1,0 +1,10 @@
+mysql -u root -P 3311
+
+LOAD DATA INFILE '/fluxo.csv'
+INTO TABLE csn.csn_fluxo
+FIELDS TERMINATED BY ';';
+
+ENCLOSED BY '"'
+LINES TERMINATED BY '/n'
+IGNORE 1 ROWS;
+
